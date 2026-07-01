@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { ShoppingBag, Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { BRAND } from "@/lib/constants";
 import { useCart } from "@/hooks/useCart";
 import MobileMenu from "./MobileMenu";
@@ -17,10 +18,25 @@ const NAV_LINKS = [
 export default function Header() {
   const { itemCount } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const isHomePage = pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const headerClass = `${styles.header} ${isHomePage && !isScrolled ? styles.transparent : styles.solid}`;
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={headerClass}>
         <div className={`container ${styles.inner}`}>
           <Link href="/" className={styles.logo}>
             {BRAND.name}

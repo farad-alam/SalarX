@@ -18,11 +18,24 @@ export default function Home() {
           priority
           className={styles.heroImage}
         />
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>ELEVATE YOUR EVERYDAY</h1>
-          <Link href="/products" className={styles.btnPrimary}>
-            Shop the Collection
-          </Link>
+        <div className={styles.heroOverlay} />
+        <div className={`container ${styles.heroContainer}`}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>
+              Define<br />Your Style
+            </h1>
+            <p className={styles.heroSubtitle}>
+              Modern Menswear for Every Occasion
+            </p>
+            <div className={styles.heroButtons}>
+              <Link href="/products" className={styles.btnPrimary}>
+                Shop Now
+              </Link>
+              <Link href="/products?category=New Arrivals" className={styles.btnSecondary}>
+                New Arrivals
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
