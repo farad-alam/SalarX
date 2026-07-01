@@ -1,0 +1,31 @@
+export const tokens = {
+  colors: {
+    black: "var(--color-black)",
+    offWhite: "var(--color-off-white)",
+    slate: "var(--color-slate)",
+    gray: "var(--color-gray)",
+    background: "var(--color-background)",
+    foreground: "var(--color-foreground)",
+  },
+  spacing: {
+    1: "var(--spacing-1)",
+    2: "var(--spacing-2)",
+    3: "var(--spacing-3)",
+    4: "var(--spacing-4)",
+    5: "var(--spacing-5)",
+    6: "var(--spacing-6)",
+    8: "var(--spacing-8)",
+    10: "var(--spacing-10)",
+    12: "var(--spacing-12)",
+    16: "var(--spacing-16)",
+  },
+  layout: {
+    maxWidthContainer: "var(--max-width-container)",
+    headerHeight: "var(--header-height)",
+  },
+  transitions: {
+    fast: "var(--transition-fast)",
+    normal: "var(--transition-normal)",
+    slow: "var(--transition-slow)",
+  },
+} as const;

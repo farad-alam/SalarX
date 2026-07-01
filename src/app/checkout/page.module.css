@@ -1,0 +1,23 @@
+.container {
+  padding: var(--spacing-8) var(--spacing-4);
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 2fr 1.2fr;
+    gap: var(--spacing-12);
+  }
+}

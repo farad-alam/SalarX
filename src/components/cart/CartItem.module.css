@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) 0;
+  border-bottom: 1px solid var(--color-slate);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100px;
+  height: 125px;
+  background-color: #EAEAEA;
+  flex-shrink: 0;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.variant {
+  font-size: 0.875rem;
+  color: var(--color-gray);
+  margin-top: var(--spacing-1);
+}
+
+.price {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-4);
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-slate);
+  width: fit-content;
+}
+
+.quantityBtn {
+  padding: var(--spacing-1) var(--spacing-3);
+  color: var(--color-foreground);
+}
+
+.quantityValue {
+  padding: 0 var(--spacing-3);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.removeBtn {
+  color: var(--color-gray);
+  font-size: 0.875rem;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.removeBtn:hover {
+  color: #ef4444;
+}

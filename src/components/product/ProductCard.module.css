@@ -1,0 +1,67 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.imageContainer {
+  position: relative;
+  aspect-ratio: 4/5;
+  background-color: #EAEAEA;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: var(--spacing-3);
+  left: var(--spacing-3);
+  z-index: 10;
+  background-color: var(--color-off-white);
+  color: var(--color-black);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trending {
+  background-color: var(--color-black);
+  color: var(--color-off-white);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: none;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-gray);
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  opacity: 0.5;
+}

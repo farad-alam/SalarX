@@ -1,0 +1,101 @@
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-off-white);
+  padding: var(--spacing-12) 0 var(--spacing-6) 0;
+  margin-top: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    border-top: 1px solid var(--color-slate);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-12);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.brandInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.description {
+  color: var(--color-gray);
+  max-width: 300px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-4);
+  letter-spacing: 0.05em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.link {
+  color: var(--color-gray);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-off-white);
+}
+
+.whatsappCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+  color: #25D366;
+  font-weight: 600;
+  transition: opacity var(--transition-fast);
+}
+
+.whatsappCta:hover {
+  opacity: 0.8;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-slate);
+  padding-top: var(--spacing-6);
+  gap: var(--spacing-4);
+  color: var(--color-gray);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .bottom {
+    flex-direction: row;
+  }
+}
+
+.payments {
+  display: flex;
+  gap: var(--spacing-4);
+}
