@@ -4,19 +4,21 @@
   min-height: 100vh;
   background-color: var(--color-background);
   color: var(--color-foreground);
-  padding: var(--spacing-8) var(--spacing-4);
-  padding-bottom: 200px; /* Space for overlapping cards */
+  padding: var(--spacing-4);
+  padding-bottom: 220px; /* Space for overlapping cards */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-8);
+  gap: var(--spacing-4);
   overflow: hidden;
 }
 
 @media (min-width: 1024px) {
   .heroLayout {
     flex-direction: row;
-    padding: var(--spacing-12) var(--spacing-16);
-    padding-bottom: 180px;
+    height: calc(100vh - var(--header-height));
+    min-height: 650px;
+    padding: var(--spacing-8) var(--spacing-16);
+    padding-bottom: 120px; /* Leave space for cards inside viewport */
   }
 }
 
@@ -57,38 +59,59 @@
 }
 
 .heroTitle {
-  font-family: var(--font-heading);
-  font-size: 4rem;
-  line-height: 1;
+  font-family: var(--font-body);
+  font-size: 3rem;
+  line-height: 1.1;
   font-weight: 800;
   letter-spacing: -0.03em;
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-6);
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
   .heroTitle {
-    font-size: 6.5rem;
+    font-size: 5rem;
   }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: clamp(3rem, 6vw, 7rem);
+  }
+}
+
+.titleLine1, .titleLine2 {
+  display: flex;
+  align-items: center;
 }
 
 .inlinePill {
   position: relative;
   display: inline-block;
-  width: 100px;
-  height: 50px;
-  border-radius: 25px;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
   overflow: hidden;
-  vertical-align: middle;
   margin-right: var(--spacing-3);
-  margin-top: -10px;
+  flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
   .inlinePill {
-    width: 150px;
-    height: 75px;
-    border-radius: 40px;
+    width: 120px;
+    height: 60px;
+    border-radius: 30px;
     margin-right: var(--spacing-4);
+  }
+}
+
+@media (min-width: 1024px) {
+  .inlinePill {
+    width: 15vw;
+    max-width: 180px;
+    height: 7.5vw;
+    max-height: 90px;
+    border-radius: 45px;
   }
 }
 

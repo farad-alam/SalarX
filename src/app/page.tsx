@@ -26,11 +26,13 @@ export default function Home() {
           </div>
 
           <h1 className={styles.heroTitle}>
-            Fresh & <br/>
-            <span className={styles.inlinePill}>
-              <Image src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=200&auto=format&fit=crop" alt="Inline" fill style={{ objectFit: 'cover' }}/>
-            </span>
-            <span className={styles.titleGray}>Stylish</span>
+            <div className={styles.titleLine1}>FRESH &</div>
+            <div className={styles.titleLine2}>
+              <span className={styles.inlinePill}>
+                <Image src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=200&auto=format&fit=crop" alt="Inline" fill style={{ objectFit: 'cover' }}/>
+              </span>
+              <span className={styles.titleGray}>STYLISH</span>
+            </div>
           </h1>
 
           <div className={styles.ctaRow}>
@@ -46,7 +48,7 @@ export default function Home() {
         <div className={styles.heroRight}>
           <div className={styles.circleBg}></div>
           <Image 
-            src="https://images.unsplash.com/photo-1516826957135-700ede19c6ce?q=80&w=1200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1200&auto=format&fit=crop" 
             alt="Stylish Model" 
             fill 
             priority
