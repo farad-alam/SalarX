@@ -9,33 +9,83 @@ export default function Home() {
 
   return (
     <>
-      {/* 1. Hero Section */}
-      <section className={styles.hero}>
-        <Image
-          src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=2000&auto=format&fit=crop"
-          alt="SalarX Collection Hero"
-          fill
-          priority
-          className={styles.heroImage}
-        />
-        <div className={styles.heroOverlay} />
-        <div className={`container ${styles.heroContainer}`}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>
-              Define<br />Your Style
-            </h1>
-            <p className={styles.heroSubtitle}>
-              Modern Menswear for Every Occasion
-            </p>
-            <div className={styles.heroButtons}>
-              <Link href="/products" className={styles.btnPrimary}>
-                Shop Now
-              </Link>
-              <Link href="/products?category=New Arrivals" className={styles.btnSecondary}>
-                New Arrivals
-              </Link>
+      {/* 1. Hero Section (Light Bento Layout) */}
+      <section className={styles.heroLayout}>
+        {/* Left Column */}
+        <div className={styles.heroLeft}>
+          <div className={styles.topInfoRow}>
+            <div className={styles.welcomeText}>
+              Hello Brooklyn!<br/>welcome to SalarX
+            </div>
+            <div className={styles.miniPill}>
+              <Image src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" alt="Model" fill style={{ objectFit: 'cover' }}/>
+            </div>
+            <div className={styles.infoText}>
+              Beautifully efficient apparel for<br/>the modern world
             </div>
           </div>
+
+          <h1 className={styles.heroTitle}>
+            Fresh & <br/>
+            <span className={styles.inlinePill}>
+              <Image src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=200&auto=format&fit=crop" alt="Inline" fill style={{ objectFit: 'cover' }}/>
+            </span>
+            <span className={styles.titleGray}>Stylish</span>
+          </h1>
+
+          <div className={styles.ctaRow}>
+            <p className={styles.ctaText}>Your Gateway to Chic and<br/>Contemporary Living</p>
+            <Link href="/products" className={styles.btnExplore}>
+              Explore Our Store
+              <span className={styles.btnIcon}>↗</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Right Column */}
+        <div className={styles.heroRight}>
+          <div className={styles.circleBg}></div>
+          <Image 
+            src="https://images.unsplash.com/photo-1516826957135-700ede19c6ce?q=80&w=1200&auto=format&fit=crop" 
+            alt="Stylish Model" 
+            fill 
+            priority
+            className={styles.modelImage}
+          />
+        </div>
+        
+        {/* Bottom Bento Cards */}
+        <div className={styles.heroCards}>
+          <Link href="/products?category=Outerwear" className={styles.card}>
+            <div className={styles.cardImageContainer}>
+              <Image src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?q=80&w=500&auto=format&fit=crop" alt="Outerwear" fill className={styles.cardImage} />
+            </div>
+            <div className={styles.cardContent}>
+              <h3 className={styles.cardTitle}>Outerwear<br/><span className={styles.cardTitleLight}>Collection</span></h3>
+              <p className={styles.cardDesc}>The Essence of Modern<br/>Sophistication</p>
+            </div>
+            <div className={styles.cardArrow}>↗</div>
+          </Link>
+          <Link href="/products?category=Premium Tees" className={styles.card}>
+            <div className={styles.cardImageContainer}>
+              <Image src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=500&auto=format&fit=crop" alt="Tees" fill className={styles.cardImage} />
+            </div>
+            <div className={styles.cardContent}>
+              <h3 className={styles.cardTitle}>Tees<br/><span className={styles.cardTitleLight}>Collection</span></h3>
+              <p className={styles.cardDesc}>The Essence of Modern<br/>Sophistication</p>
+            </div>
+            <div className={styles.cardArrow}>↗</div>
+          </Link>
+          <Link href="/products?category=Accessories" className={styles.card}>
+            <div className={styles.cardImageContainer}>
+              <Image src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=500&auto=format&fit=crop" alt="Accessories" fill className={styles.cardImage} />
+            </div>
+            <div className={styles.cardContent}>
+              <h3 className={styles.cardTitle}>Accs.<br/><span className={styles.cardTitleLight}>Collection</span></h3>
+              <p className={styles.cardDesc}>The Essence of Modern<br/>Sophistication</p>
+            </div>
+            <div className={styles.cardArrowDark}>↗</div>
+          </Link>
         </div>
       </section>
 

@@ -118,19 +118,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: background-color var(--transition-normal), color var(--transition-normal);
-}
-
-.solid {
   background-color: var(--color-background);
   color: var(--color-foreground);
   border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.transparent {
-  background-color: transparent;
-  color: var(--color-off-white);
-  border-bottom: 1px solid transparent;
 }
 
 .mobileMenuToggle {
