@@ -56,7 +56,7 @@ export const products: Product[] = [
       { id: "p3-34", name: "34", sku: "URB-CRG-34", stock: 8 },
     ],
     isTrending: true,
-  }
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {

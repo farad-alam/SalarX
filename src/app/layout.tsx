@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { Syne, Inter } from "next/font/google";
+import { Syne, Inter, Cormorant_Garamond } from "next/font/google";
 import "@/styles/globals.css";
 import { BRAND } from "@/lib/constants";
 import { CartProvider } from "@/context/CartContext";
@@ -17,6 +16,15 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const cormorant = Cormorant_Garamond({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: {
     template: `%s | ${BRAND.name}`,
@@ -32,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${syne.variable} ${inter.variable}`}>
+      <body className={`${syne.variable} ${inter.variable} ${cormorant.variable}`}>
         <CartProvider>
           <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
             <Header />

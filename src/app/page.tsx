@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/data/products";
 import ProductCard from "@/components/product/ProductCard";
+import CoverflowCarousel from "@/components/product/CoverflowCarousel";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -91,6 +92,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Collection Coverflow Carousel */}
+      <CoverflowCarousel />
+
       {/* 2. Trending Carousel */}
       <section className={styles.section}>
         <div className={`container ${styles.sectionHeader}`}>
@@ -105,6 +109,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
 
       {/* 3. Category Bento Grid */}
       <section className={styles.section}>
