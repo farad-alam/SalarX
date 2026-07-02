@@ -92,7 +92,7 @@ export default function CoverflowCarousel() {
   const [activeIndex, setActiveIndex] = useState(3); // Start with slide 4 (index 3) active
 
   return (
-    <section className="relative w-full py-12 md:py-20 bg-[#F8F8F6] overflow-hidden select-none">
+    <section className="relative w-full py-28 md:py-40 bg-[#F8F8F6] overflow-hidden select-none">
       {/* Title Block - Confined to container for standard horizontal alignment */}
       <div className="container mx-auto px-4 text-center mb-8 md:mb-12">
         <h2

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ShoppingBag, Menu } from "lucide-react";
 import { useState } from "react";
 import { BRAND } from "@/lib/constants";
@@ -9,9 +10,10 @@ import MobileMenu from "./MobileMenu";
 import styles from "./Header.module.css";
 
 const NAV_LINKS = [
-  { label: "Shop All", href: "/products" },
-  { label: "Outerwear", href: "/products?category=Outerwear" },
-  { label: "Tees", href: "/products?category=Premium Tees" },
+  { label: "Products", href: "/products" },
+  { label: "Sale", href: "/products?category=Sale" },
+  { label: "Gift", href: "/products?category=Gift" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Header() {
