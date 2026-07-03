@@ -19,13 +19,13 @@ export default function ProductDetail({ product }: { product: Product }) {
       return;
     }
     setError("");
-    
+
     addItem({
       product,
       variant: selectedVariant,
       quantity,
     });
-    
+
     // Using a native alert for simplicity in this phase
     // Can be replaced with a toast notification later
     alert("Added to cart!");
@@ -41,7 +41,7 @@ export default function ProductDetail({ product }: { product: Product }) {
   return (
     <div className={styles.container}>
       <ImageGallery images={product.images} alt={product.name} />
-      
+
       <div className={styles.info}>
         <div className={styles.header}>
           <h1 className={styles.title}>{product.name}</h1>
@@ -87,7 +87,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           </div>
         </div>
 
-        <button 
+        <button
           className={styles.addToCart}
           onClick={handleAddToCart}
           disabled={!selectedVariant || selectedVariant.stock === 0}

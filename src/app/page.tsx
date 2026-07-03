@@ -4,6 +4,8 @@ import { products } from "@/data/products";
 import ProductCard from "@/components/product/ProductCard";
 import CoverflowCarousel from "@/components/product/CoverflowCarousel";
 import LuxuriousAppealSection from "@/components/sections/LuxuriousAppealSection";
+import PromotionalBanner from "@/components/sections/PromotionalBanner";
+import PlusFleeceSection from "@/components/sections/PlusFleeceSection";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -120,20 +122,6 @@ export default function Home() {
       {/* Luxurious & Contemporary Appeal Section */}
       <LuxuriousAppealSection />
 
-      {/* 2. Trending Carousel */}
-      <section className={styles.section}>
-        <div className={`container ${styles.sectionHeader}`}>
-          <h2 className={styles.sectionTitle}>Trending Now</h2>
-          <Link href="/products" className={styles.linkViewAll}>View All</Link>
-        </div>
-        <div className={styles.carousel}>
-          {trendingProducts.map(product => (
-            <div key={product.id} className={styles.carouselItem}>
-              <ProductCard product={product} />
-            </div>
-          ))}
-        </div>
-      </section>
 
 
       {/* 3. Category Bento Grid */}
@@ -175,23 +163,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Brand Ethos */}
-      <section className={styles.ethos}>
-        <div className={styles.ethosImageContainer}>
-          <Image
-            src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1000&auto=format&fit=crop"
-            alt="SalarX Craftsmanship" fill className={styles.heroImage}
-          />
-        </div>
-        <div className={styles.ethosContent}>
-          <h2 className={styles.sectionTitle}>Uncompromising Quality.</h2>
-          <p className={styles.ethosText}>
-            At SalarX, we believe that premium fashion should be accessible without sacrificing craftsmanship.
-            Every piece is designed with meticulous attention to detail, using high-grade materials to ensure
-            you look and feel your best, every single day.
-          </p>
-        </div>
-      </section>
+      {/* Promotional Banner */}
+      <PromotionalBanner />
+
+      {/* 4. Plus Fleece Section */}
+      <PlusFleeceSection />
 
       {/* 5. Shop the Look / Social Proof */}
       <section className={styles.section}>
@@ -201,13 +177,13 @@ export default function Home() {
         </div>
         <div className={styles.socialGrid}>
           {[
-            "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=500&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1550246140-5119ae4790b8?q=80&w=500&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1512413914421-46abef178342?q=80&w=500&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1616150247604-032906b3bc4f?q=80&w=500&auto=format&fit=crop"
+            "https://images.unsplash.com/photo-1618886614638-80e3c103d31a?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=600&auto=format&fit=crop"
           ].map((img, i) => (
             <div key={i} className={styles.socialItem}>
-              <Image src={img} alt={`Social Post ${i}`} fill style={{ objectFit: "cover" }} />
+              <Image src={img} alt={`Social Post ${i}`} fill style={{ objectFit: "cover", objectPosition: "center" }} />
               <div className={styles.socialOverlay}>Shop the look</div>
             </div>
           ))}

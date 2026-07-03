@@ -570,7 +570,7 @@
 
 .socialItem {
   position: relative;
-  aspect-ratio: 1;
+  aspect-ratio: 3/4;
   background-color: var(--color-gray);
   overflow: hidden;
 }
