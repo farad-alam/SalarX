@@ -122,6 +122,9 @@ export default function Home() {
       {/* Luxurious & Contemporary Appeal Section */}
       <LuxuriousAppealSection />
 
+      {/* Spacer */}
+      <div className="h-10 md:h-16 w-full bg-white"></div>
+
       {/* 3. Category Bento Grid */}
       <section className="py-24 md:py-36 bg-[#fbfbfa]">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
@@ -179,8 +182,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Spacer */}
+      <div className="h-10 md:h-16 w-full bg-white"></div>
+
       {/* Promotional Banner */}
       <PromotionalBanner />
+
+      {/* Spacer */}
+      <div className="h-10 md:h-16 w-full bg-white"></div>
 
       {/* 4. Plus Fleece Section */}
       <PlusFleeceSection />

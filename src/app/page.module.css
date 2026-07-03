@@ -406,12 +406,12 @@
 
 /* Sections Common */
 .section {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: 128px 0;
+    padding: 64px 0;
   }
 }
 
