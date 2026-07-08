@@ -42,10 +42,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${syne.variable} ${inter.variable} ${cormorant.variable}`}>
         <CartProvider>
-          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+          <div className="w-full overflow-x-hidden flex flex-col min-h-screen">
             <Header />
-            <main style={{ flex: 1 }}>
-              {children}
+            <main className="w-full flex-1 flex flex-col items-center">
+              <div className="w-full flex flex-col">
+                {children}
+              </div>
             </main>
             <Footer />
           </div>

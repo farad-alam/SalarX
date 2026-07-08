@@ -38,9 +38,10 @@ export default function LuxuriousAppealSection() {
   ];
 
   return (
-    <section className="relative w-full bg-[#FBFBFA] py-28 md:py-40 overflow-hidden select-none border-t border-[#F0EFEB]">
+    <section className="w-full bg-[var(--background)] px-4 sm:px-6 md:px-8 py-4 sm:py-8">
+      <div className="relative w-full max-w-[1920px] mx-auto bg-[#F8F8F6] rounded-[2rem] pt-8 pb-8 md:pt-12 md:pb-12 overflow-hidden select-none border border-[#F0EFEB]">
       {/* Editorial Title Block - Full Width with Explicit Centering */}
-      <div className="flex flex-col items-center justify-center text-center w-full px-4 mb-16 md:mb-20">
+      <div className="flex flex-col items-center justify-center text-center w-full px-4 mb-12 md:mb-16">
         <h2 
           className="text-center w-full text-4xl sm:text-5xl md:text-6xl font-light tracking-wide text-[#0A0A0A] leading-[1.1]"
           style={{ 
@@ -92,6 +93,7 @@ export default function LuxuriousAppealSection() {
           scrollbar-width: none;
         }
       `}</style>
+      </div>
     </section>
   );
 }

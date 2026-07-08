@@ -33,16 +33,16 @@ const Hotspot = ({ top, left, title, subtitle, pointsLeft }: { top: string, left
 
 export default function PlusFleeceSection() {
   return (
-    <section className="w-full bg-[#eff0f2] pb-12 mx-auto md:pb-24 relative overflow-hidden">
-
+    <section className="w-full bg-[var(--background)] px-4 sm:px-6 md:px-8">
+      <div className="w-full bg-[#F8F8F6] rounded-[2rem] py-8 mx-auto md:py-12 relative overflow-hidden max-w-[1920px]">
       {/* Top Header Line */}
-      <div className="w-full flex justify-center z-10 relative pt-8">
+      <div className="w-full flex justify-center z-10 relative">
         <div className="w-full max-w-7xl px-6 md:px-12">
           <div className="flex justify-between items-center text-[9px] font-medium text-gray-500 uppercase tracking-widest">
             <span>SalarX Active</span>
             <span>Winter 2026</span>
           </div>
-          <div className="w-full border-t border-gray-300 mt-2 mb-8"></div>
+          <div className="w-full border-t border-gray-300 mt-2 mb-12 md:mb-16"></div>
         </div>
       </div>
 
@@ -64,6 +64,9 @@ export default function PlusFleeceSection() {
 
           {/* Center Text */}
           <div className="text-center flex flex-col items-center justify-center order-first lg:order-none z-30 flex-1 mb-8 lg:mb-0">
+            <h4 className="text-sm md:text-base font-semibold text-gray-500 uppercase tracking-[0.3em] mb-4 md:mb-6">
+              Style Spotlight
+            </h4>
             <h2 className="text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-black text-[#1a1a1a] tracking-tight mb-1 whitespace-nowrap">
               PLUS FLEECE,
             </h2>
@@ -94,6 +97,7 @@ export default function PlusFleeceSection() {
           </div>
 
         </div>
+      </div>
       </div>
     </section>
   );

@@ -92,9 +92,9 @@ export default function CoverflowCarousel() {
   const [activeIndex, setActiveIndex] = useState(3); // Start with slide 4 (index 3) active
 
   return (
-    <section className="relative w-full py-28 md:py-40 bg-[#F8F8F6] overflow-hidden select-none">
+    <section className="relative w-full bg-[#F8F8F6] pt-12 pb-8 md:pt-24 md:pb-8 overflow-hidden select-none">
       {/* Title Block - Confined to container for standard horizontal alignment */}
-      <div className="container mx-auto px-4 text-center mb-8 md:mb-12">
+      <div className="container mx-auto px-4 text-center mb-12 md:mb-16">
         <h2
           className="text-2xl md:text-4xl font-light tracking-[0.25em] uppercase select-none text-[#0A0A0A]"
           style={{ fontFamily: "var(--font-serif), Cormorant Garamond, serif" }}
@@ -104,7 +104,7 @@ export default function CoverflowCarousel() {
       </div>
 
       {/* Swiper Container - Positioned outside container class to span full 100vw, ensuring exact left-right symmetry */}
-      <div className="relative w-full overflow-visible">
+      <div className="relative w-full overflow-visible max-w-[1920px] mx-auto">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -114,10 +114,10 @@ export default function CoverflowCarousel() {
           initialSlide={3}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex % slidesData.length)}
           coverflowEffect={{
-            rotate: 15,
-            stretch: -55,  // Pulled closer together to match the tight overlapping in reference design
-            depth: 140,    // Creates the Z-axis 3D translation depth
-            modifier: 1.1,
+            rotate: 10,
+            stretch: -20,  // Reduced stretch so slides don't bunch up excessively on wide screens
+            depth: 200,    // Increased depth for better 3D effect
+            modifier: 1,
             slideShadows: false,
           }}
           pagination={{

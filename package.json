@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.2",
+    "cloudinary": "^2.10.0",
     "lucide-react": "^1.22.0",
+    "mongoose": "^9.7.3",
     "next": "16.2.9",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.5.16",
